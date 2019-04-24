@@ -3,7 +3,7 @@ var globalConf=require('./config');
 console.log(typeof globalConf['web_path']);
 var controllerSet=[];
 var pathMap=new Map();
-var files=fs.readdirSync(globalConf['web_path'].toString());
+var files=fs.readdirSync(globalConf['web_path']);
 for(var i=0;i<files.length;i++){
     var temp=require('./'+globalConf['web_path']+'/'+files[i]);
     if(temp.path){
