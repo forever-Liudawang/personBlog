@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content .wrapper .about_content_left{
+    width: 63%;
+    display: inline-block;
+    margin-right: 4%;
+}
+.content .wrapper .about_content_left .about{
+    padding: 18px 12px;
+    border-radius:8px;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px #5f5f5f;
+}
+.content  .about_content_left .about_me .title{
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    padding: 14px 0;
+    border-bottom: 1px solid darkgrey;
+}
+.content  .about_content_left .about_me  .text{
+    margin-top: 14px ;
+    font-size: 14px;
+    color: #333;
+}
+.content  .about_content_left .about_me  .text  .from{
+    line-height: 36px;
+}
+.content  .about_content_left .about_me  .text li{
+    line-height: 20px;
+}
+.content  .about_content_left .about_me .bookList{
+    margin-top: 12px;
+}
+.content  .about_content_left .about_me span{
+    color: #23527c;;
+}
+.content  .about_content_left .about_blog .title{
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    padding: 14px 0;
+    margin-top: 20px;
+    border-bottom: 1px solid darkgrey;
+
+}
+.content  .about_content_left .about_blog  .text{
+    margin-top: 20px;
+}
+.content  .about_content_left .about_blog  .text li{
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+}
+.content  .about_content_left .mark{
+    margin-top: 24px;
+}
+.content  .about_content_left .mark>span{
+    padding: 4px 10px;
+}
+.content  .about_content_left .mark-item{
+    margin-top: 20px;
+    padding: 12px 10px;
+    border:1px dashed royalblue;
+    font-size: 14px;
+    color:darkorange;
+    background-color:aquamarine;
+}
+

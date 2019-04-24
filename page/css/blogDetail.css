@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.blogDetail-left{
+    width: 63%;
+    display: inline-block;
+    margin-right: 4%;
+
+}
+.blogDetail{
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 8px #ccc;
+    padding: 16px 18px ;
+    box-sizing: border-box;
+    border-radius:10px;
+    margin-bottom: 40px;
+}
+.blogDetail-left .cur{
+    font-size: 14px;
+
+}
+.blogDetail-left .title{
+    font-size: 20px ;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.blogDetail-left .from{
+    font-size: 14px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.comment{
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 8px #ccc;
+    padding: 16px 18px ;
+    box-sizing: border-box;
+    border-radius:10px;
+    margin-bottom: 40px;
+}
+.comment .title{
+    margin: 2px 0 10px 0;
+}
+.comment input{
+    outline: none;
+    border: none;
+    border-radius:6px;
+    box-shadow:0px 0px 2px #333;
+    padding: 4px 6px;
+    font-size: 16px;
+}
+.comment #funName{
+    margin-right: 30px;
+}
+.comment .inp{
+    margin-bottom: 10px;
+}
+.comment textarea{
+    margin-bottom: 10px;
+    width: 90%;
+    max-width: 97%;
+    min-height: 100px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px 8px;
+}
+.comment .yanzheng{
+    margin-bottom: 10px;
+}
+.comment .yanzheng span:hover{
+    cursor: pointer;
+}
+
+.comment .yanzheng span svg{
+    vertical-align: bottom;
+}
+.comment button{
+    border: none;
+    padding: 4px 10px;
+    border-radius:6px;
+    box-shadow:0px 0px 2px #ddd;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.comment button:hover{
+    box-shadow:0px 0px 2px #333;
+}
+.blogDetail-left  .mark {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.blogDetail-left   .mark>span{
+    padding: 4px 10px;
+}
+.blogDetail-left  .mark .mark-item{
+    margin-top: 20px;
+    padding: 12px 10px;
+    border:1px dashed royalblue;
+    font-size: 14px;
+    color:darkorange;
+    background-color:aquamarine;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="css/blogDetail.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="name">我的个人博客 | 技术博客</div>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="map.html">地图</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="mark.html">留言</a></li>
+            <li><a href="editSing.html">每日一句编辑</a></li>
+            <li><a href="article.html">文章编辑</a></li>
+        </ul>
+        <input type="text" placeholder="输入关键词查找" class="inp">
+        <button class="search">搜索</button>
+    </div>
+</header>
+<div class="content">
+    <div class="wrapper">
+        <div class="blogDetail-left" id="blogDetail-left">
+            <div class="blogDetail">
+                <div class="cur">当前位置：<a href="index.html">博客首页</a>》》阅读正文</div>
+                <div class="blogDetail-footer">
+                    <div class="title">发生发射点发</div>
+                    <div class="from">
+                        作者：刘哥 分类：片言碎语 发布于：{{ctime}} 浏览{{views}} 评论({{tags}})
+                    </div>
+                    <div class="content">{{content}}</div>
+                </div>
+            </div>
+
+            <div class="mark">
+                <span>留言： 目前有{{markCount}}条留言</span>
+                <div class="mark-item" v-for="markItem in markList">
+                    <span><b>{{markItem.user_name}}：{{markItem.options}}</b>发表于 {{markItem.ctime}} <a @click="reply(markItem.id,markItem.user_name)">[回复]</a></span>
+                    <p>{{markItem.comments}}</p>
+                </div>
+            </div>
+
+
+
+            <div class="comment" id="comment">
+               <div class="title"><h3>发表评论</h3></div>
+                <div class="inp">
+                    <input type="hidden" id="reply" value="-1">
+                    <input type="hidden" id="reply_name" value="0">
+
+                    <input type="text" placeholder="昵称" id="funName">
+                    <input type="text" placeholder="邮箱" id="email">
+                </div>
+                <div class="textArea">
+                    <textarea placeholder="评论区" id="comment_content"></textarea>
+                </div>
+                <div class="yanzheng">
+                    <input type="text" placeholder="验证码" id="sureCode">
+                    <span v-html="randomCode" @click="changeCode()"></span>
+                </div>
+                <div class="btn">
+                    <button @click="onComment()">提交留言</button>
+                    <button>重写</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-right" id="content_id">
+            <div class="item_random">
+                <div class="title">随机标签云</div>
+                <div class="box">
+                    <a href="/" v-for="tag in tagList" :style="{color:randomColor(),fontSize:randomFontSize()}">{{tag.tag}}</a>
+
+                </div>
+            </div>
+            <div class="item_hot">
+                <div class="title">最近热门</div>
+                <ul>
+                    <li class="mation" v-for="item in hotList"><a :href="item.link">{{item.title}}</a></li>
+
+                </ul>
+
+            </div>
+            <div class="newRemark">
+                <div class="title">最新评论</div>
+                <ul>
+                    <li v-for="item in remarkList">
+                        <div class="remarkMation">
+                            <span class="user">{{item.user_name}}</span>
+                            <span class="ctime">[{{item.ctime}}]</span>
+                        </div>
+                        <div class="remark">{{item.comments}}</div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="frinedLink">
+                <div class="title">
+                    友情链接
+                </div>
+                <ul>
+                    <li>
+                        <a>伺服电机开了</a><a>发士大夫</a>
+                    </li>
+                    <li>
+                        <a>发射点？</a><a>附件简历</a>
+                    </li>
+                    <li>
+                        <a>他静悄悄的来过</a><a>你发给国家</a>
+                    </li>
+                    <li>
+                        <a>温热</a><a>录音卡引路</a>
+                    </li>
+                    <li>
+                        <a>还有谁</a><a>南宫</a>
+                    </li>
+                    <li>
+                        <a>这是高手</a><a>南宫</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <ul>
+            <li>c/c++</li>
+            <li>css/DIV</li>
+            <li>java</li>
+            <li>javascript</li>
+            <li>linux</li>
+            <li>Mac</li>
+            <li>pc技术</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Raspbeny</li>
+            <li>Uuntu</li>
+            <li>wordpress</li>
+            <li>关于SEO</li>
+            <li>css/DIV</li>
+            <li>java</li>
+            <li>javascript</li>
+            <li>linux</li>
+            <li>Mac</li>
+            <li>pc技术</li>
+            <li>PHP</li>
+
+        </ul>
+        <div class="copyRight">Copyright © 2010-2017 我的个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号站长统计</div>
+    </div>
+</footer>
+<script src="js/index.js"></script>
+<script src="js/blog_detail.js"></script>
+<script src="js/base.js"></script>
+
+</body>
+</html>

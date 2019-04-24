@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/map.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <header>
+            <span class="title">我的个人博客's SiteMap</span>
+        </header>
+        <div class="nav">
+            <a href="./index.html"><b>我的个人博客</b>>>站点地图</a>
+        </div>
+        <div class="newArticle">
+            <div class="title">最新文章</div>
+            <ul>
+                <li v-for="blog in blogList"><a :href="blog.hash">{{blog.title}}</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+<script src="js/mapSite.js"></script>
+</body>
+</html>

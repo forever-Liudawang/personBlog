@@ -1,0 +1,192 @@
+.content .wrapper{
+    width:84%;
+    margin:0 auto;
+}
+.content .content-left{
+    width: 63%;
+    display: inline-block;
+    margin-right: 4%;
+}
+a:hover{
+    cursor: pointer;
+}
+.content .wrapper .saying{
+    padding: 18px 12px;
+    border-radius:8px;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 10px #5f5f5f;
+}
+.content .wrapper .saying .every_day{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.content .wrapper .saying .every_day:after{
+    margin-left: 10px;
+    font-family: MyIcon;
+    content: '\e122';
+}
+.content .wrapper .saying .eng{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.content .wrapper .saying .zh,.author{
+    font-size: 14px;
+}
+.content .wrapper .saying .author{
+    margin-left: 500px;
+}
+.content .wrapper .article{
+    margin-bottom: 20px;
+}
+.content .wrapper .article_text{
+    background-color: #fff;
+    border-radius:8px;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    padding: 18px 12px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 2px #5f5f5f;
+
+}
+
+.content .wrapper .article .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+.content .wrapper .article a{
+    color:darkkhaki;
+
+}
+
+.content .wrapper .article a:hover{
+    color:darkgray;
+}
+.content .wrapper .article .article_content{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.content .wrapper .article .footer{
+    background-color: #1f1f1f;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+    padding: 10px 12px;
+    color: azure;
+    font-size: 14px;
+}
+.content .content-right{
+    width: 33%;
+    float: right;
+}
+.content .content-right .item_random{
+    background-color: #1f1f1f;
+    padding: 8px 8px;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+.content .content-right .item_random .title{
+    color: lavender;
+    margin-bottom: 16px;
+}
+.content .content-right .item_random a{
+    line-height: 28px;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 8px;
+}
+.content .content-right .item_hot{
+    background-color: #1f1f1f;
+    padding: 10px 8px;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+.content .content-right .item_hot .title{
+    color:rosybrown;
+    margin-bottom: 16px;
+
+}
+.content .content-right .item_hot ul{
+    width: 100%;
+}
+.content .content-right .item_hot a{
+    color: #fff;
+}
+.content .content-right .item_hot .mation{
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    border-bottom: 1px solid #292929;
+}
+.content .content-right .newRemark{
+    background-color: #1f1f1f;
+    padding: 10px 8px;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+.content .content-right .newRemark .title{
+    color:chartreuse;
+    margin-bottom: 16px;
+}
+.content .content-right .newRemark ul{
+    width: 100%;
+}
+
+.content .content-right .newRemark .remarkMation{
+    color: #eee;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4px;
+}
+.content .content-right .newRemark .remarkMation .ctime{
+    position: absolute;
+    right: 0;
+}
+.content .content-right .newRemark li{
+    border-bottom: 1px solid #292929;
+    margin-bottom: 12px;
+    padding:4px 4px;
+}
+.content .content-right .newRemark li .remark{
+    color: #777;
+}
+.content .content-right .frinedLink{
+    background-color: #1f1f1f;
+    padding: 10px 8px;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+.content .content-right .title{
+    color:dodgerblue;
+    margin-bottom: 16px;
+
+}
+.content .content-right .frinedLink ul{
+    width: 100%;
+}
+.content .content-right  .frinedLink li{
+    display: flex;
+    justify-content: space-between;
+    color: #eee;
+    line-height: 30px;
+    border-bottom: 1px solid #292929;
+    padding: 2px 16px;
+}
+.footer{
+    background-color: #191818;
+    color: #a2a2a2;
+    text-align: center;
+    padding: 14px 10px;
+}
+.footer li{
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+
+
+
+

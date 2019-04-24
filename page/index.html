@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+       <header>
+           <div class="header">
+               <div class="name">我的个人博客 | 技术博客</div>
+               <ul>
+                   <li><a href="/">首页</a></li>
+                   <li><a href="map.html">地图</a></li>
+                   <li><a href="about.html">关于</a></li>
+                   <li><a href="mark.html">留言</a></li>
+                   <li><a href="editSing.html">每日一句编辑</a></li>
+                   <li><a href="article.html">文章编辑</a></li>
+               </ul>
+               <input type="text" placeholder="输入关键词查找" class="inp">
+               <button class="search">搜索</button>
+           </div>
+       </header>
+        <div class="content">
+            <div class="wrapper">
+                <div class="content-left" id="content_left">
+                    <div class="saying">
+                        <div class="every_day">每日一句</div>
+                        <div class="eng">{{content}}</div>
+                        <span class="author">-------Gustave Flaubert</span>
+                    </div>
+                    <div class="article" v-for="item in articleList">
+                        <div class="article_text">
+                            <div class="title"><a :href="item.link">{{item.title}}</a></div>
+                            <p class="article_content">{{item.content}}</p>
+                        </div>
+                        <div class="footer">发布于<span>{{item.data}}</span>|  浏览<span>{{item.views}}次</span>| Tags：<span>{{item.tags}}</span></div>
+                    </div>
+                    <div class="runPage">
+                        <ul>
+                            <li v-for="pageNum in pageNumList" @click="jumpTo(pageNum.page)" :class="{now_page:(parseInt(pageNum.text)==page)}">{{pageNum.text}}</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-right" id="content_id">
+                    <div class="item_random">
+                        <div class="title">随机标签云</div>
+                        <div class="box">
+                            <a :href="tag.href" v-for="tag in tagList" :style="{color:randomColor(),fontSize:randomFontSize()}">{{tag.tag}}</a>
+
+                        </div>
+                    </div>
+                    <div class="item_hot">
+                        <div class="title">最近热门</div>
+                        <ul>
+                            <li class="mation" v-for="item in hotList"><a :href="item.link">{{item.title}}</a></li>
+
+                        </ul>
+
+                    </div>
+                    <div class="newRemark">
+                        <div class="title">最新评论</div>
+                        <ul>
+                            <li v-for="item in remarkList">
+                                <div class="remarkMation">
+                                    <span class="user">{{item.user_name}}</span>
+                                    <span class="ctime">[{{item.ctime}}]</span>
+                                </div>
+                                <div class="remark">{{item.comments}}</div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="frinedLink">
+                        <div class="title">
+                            友情链接
+                        </div>
+                        <ul>
+                            <li>
+                                <a>伺服电机开了</a><a>发士大夫</a>
+                            </li>
+                            <li>
+                                <a>发射点？</a><a>附件简历</a>
+                            </li>
+                            <li>
+                                <a>他静悄悄的来过</a><a>你发给国家</a>
+                            </li>
+                            <li>
+                                <a>温热</a><a>录音卡引路</a>
+                            </li>
+                            <li>
+                                <a>还有谁</a><a>南宫</a>
+                            </li>
+                            <li>
+                                <a>这是高手</a><a>南宫</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>c/c++</li>
+                    <li>css/DIV</li>
+                    <li>java</li>
+                    <li>javascript</li>
+                    <li>linux</li>
+                    <li>Mac</li>
+                    <li>pc技术</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>Raspbeny</li>
+                    <li>Uuntu</li>
+                    <li>wordpress</li>
+                    <li>关于SEO</li>
+                    <li>css/DIV</li>
+                    <li>java</li>
+                    <li>javascript</li>
+                    <li>linux</li>
+                    <li>Mac</li>
+                    <li>pc技术</li>
+                    <li>PHP</li>
+
+                </ul>
+                <div class="copyRight">Copyright © 2010-2017 我的个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号站长统计</div>
+            </div>
+        </footer>
+       <script src="js/index.js"></script>
+       <script src="js/base.js"></script>
+</body>
+</html>

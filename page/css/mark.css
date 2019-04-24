@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content  .mark_content_left {
+    width: 63%;
+    display: inline-block;
+    margin-right: 4%;
+}
+.content  .mark_content_left .mark{
+    margin-top: 24px;
+}
+.content  .mark_content_left .mark>span{
+    padding: 4px 10px;
+}
+.content  .mark_content_left .mark-item{
+    margin-top: 20px;
+    padding: 12px 10px;
+    border:1px dashed royalblue;
+    font-size: 14px;
+    color:darkorange;
+    background-color:aquamarine;
+}
